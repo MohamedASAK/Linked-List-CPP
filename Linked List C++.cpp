@@ -112,75 +112,69 @@ void app() {
 	*/
 	int op, ath, dn, c, ao, s;
 
-	// Initial List
-	insert(10);
-	insert(20);
-	insert(30);
-	insert(40);
-	insert(50);
-
+	cout << "--- Welcome to linked list implementation---\n";
 	do {
-		cout << "Choise 1 To start, any key to end \n";
-		cin >> s;
-		if (s == 1) {
-			cout << "Choise the wration do you uant\n";
-			cout << "To add to head -> (1)\n";
-			cout << "To delete node -> (2)\n";
-			cout << "To display -> (3)\n";
-			cout << "To destory list -> (4)\n";
-			cin >> op;
-			if (op == 1) {
-				cout << "Enter value do you want to add to head\n";
-				cin >> ath;
-				AddToHead(ath);
-				display();
-			}
-			else if (op == 2) {
-				display();
-				cout << "Choise the node \n";
-				cin >> dn;
-				cout << "Are you sure to delete this node\n";
-				cout << "To Confirm Enter -> (1)\n";
-				cout << "To Cancel Enter -> any key\n";
-				cin >> c;
-				if (c == 1)
-				{
-					deleteNode(dn);
-					cout << "\nCheck data of list after deleting node : \n ";
-					display();
-				}
-				else
-				{
-					cout << "Delete is canceled\n";
-				}
-			}
-			else if (op == 3) {
-				cout << "\nThe Nodes of the Linked List are: \n";
-				display();
-			}
-			else if (op == 4) {
-				display();
-				cout << "\nIF Destroyed the whole list\n \t The result will be: \n";
-				cout << "Are you sure to destroy the whole list\n";
-				cout << "To Confirm Enter -> (1)\n";
-				cout << "To Cancel Enter -> any key\n";
-				cin >> c;
-				if (c == 1)
-				{
-					destoryList();
-					cout << "\nCheck data of list after destroying : \n ";
-					display();
-				}
-				else
-				{
-					cout << "Destroy is canceled\n";
-				}
-			}
-			else { cout << "Error in entry\n"; }
-
-			cout << "\n";
+		cout << "Choise what do you want\n";
+		cout << "Add to head -> (1)\n";
+		cout << "Delete node -> (2)\n";
+		cout << "Display -> (3)\n";
+		cout << "Destory list -> (4)\n";
+		cout << "Exit -> (5)\n";
+		cin >> op;
+		if (op == 1) {
+			cout << "Enter value do you want to add to head\n";
+			cin >> ath;
+			AddToHead(ath);
+			display();
 		}
-		else { cout << "End the programe\n"; }
+		else if (op == 2) {
+			display();
+			cout << "Choise the node \n";
+			cin >> dn;
+			cout << "Are you sure to delete this node\n";
+			cout << "To Confirm Enter -> (1)\n";
+			cout << "To Cancel Enter -> any key\n";
+			cin >> c;
+			if (c == 1)
+			{
+				deleteNode(dn);
+				cout << "\nCheck data of list after deleting node : \n ";
+				display();
+			}
+			else
+			{
+				cout << "Delete is canceled\n";
+			}
+		}
+		else if (op == 3) {
+			cout << "\nThe Nodes of the Linked List are: \n";
+			display();
+		}
+		else if (op == 4) {
+			display();
+			cout << "\nIF Destroyed the whole list\n \t The result will be: \n";
+			cout << "Are you sure to destroy the whole list\n";
+			cout << "To Confirm Enter -> (1)\n";
+			cout << "To Cancel Enter -> any key\n";
+			cin >> c;
+			if (c == 1)
+			{
+				destoryList();
+				cout << "\nCheck data of list after destroying : \n ";
+				display();
+			}
+			else
+			{
+				cout << "Destroy is canceled\n";
+			}
+		}
+		else if (op == 5)
+		{
+			return;
+		}
+		else { cout << "Error in entry\n"; }
+
+		cout << "\n";
 
 		cout << "Do you want another opration\n";
 		cout << "Yes -> 1 \n";
